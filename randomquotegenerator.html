@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #fefcea, #f1da36);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #3b2f2f;
+        }
+    
+        h1 {
+            font-size: 1.8rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 25px 30px;
+            margin: 0 20px;
+            border-radius: 20px;
+            border: 2px solid #c1a339;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+            font-style: italic;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+    
+        button {
+            margin-top: 35px;
+            padding: 12px 26px;
+            font-size: 1.1rem;
+            background-color: #3b2f2f;
+            color: #fff1b6;
+            border: none;
+            border-radius: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+    
+        button:hover {
+            background-color: #5c442a;
+            transform: scale(1.03);
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <h1 id="quote">Click the button to see my quotes</h1>
+    <button id="generatebtn">Generate</button>
+    <script>
+        const quotes = [
+    "Don't overpush,it will take time",
+    "Let's live the hell from tomorrow, until i make heaven",
+    "when you take a moment to appreciate a moment, the moment is gone",
+    "Sink also has some slippery around it",
+    "Let's live the life",
+    "There is and was always a solution",
+    "There is a difference between putting efforts and forcing",
+    "You're free to do anything and everything, just know your limits and morals",
+    "Just have instincts enough to know when are you enjoying the moment and when are you being distracted",
+    "Journey is lived in moments not by defining everyday on page and working like robot",
+    "I am the wealthiest person in the world right now, cause i have time and fit-body",
+    "Tomorrow is unpredictible and unknown if it's even gonna come",
+    "If your goals are not normal,then your journey will be alone",
+    "The only thing which is rating your looks and personality is your own brain",
+    "If you have super boring day even though working hard, remember you are in the process",
+]
+const quoteElement = document.getElementById("quote");
+const button = document.getElementById("generatebtn");
+
+button.addEventListener("click",()=>{
+    const randomindex = Math.floor(Math.random() * quotes.length);
+    quoteElement.innerText = quotes[randomindex];
+    
+});
+    </script>
+
+    
+</body>
+</html>
